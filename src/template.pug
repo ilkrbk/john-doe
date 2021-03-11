@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru-RU')
+	block link
+		-var selected = 'Home'
+	head
+		meta(charset='UTF-8')
+		title
+			block title
+		meta(name='author' content)
+		meta(name='description' content)
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet' href='css/main.min.css')
+	body
+		include components/header/header.pug
+		div.maincontent
+			block content
+		include components/footer/footer.pug
+		script(src="libs/jquery/jquery-3.2.1.min.js")
+		script(src="libs/slick/slick.min.js")
+		script(src='js/main.min.js')

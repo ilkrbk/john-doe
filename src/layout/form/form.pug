@@ -1,0 +1,18 @@
+-
+    var label = ['Name', 'E-mail address', 'Your budget range']
+
+form.form#form
+    ul.form__list
+        -   for (var x = 0; x < label.length; x++)
+        each value in label
+            li.form__elem-wrap
+                input.form__input(type='text')
+                label.form__label= value
+                .form__line
+    
+    .form__elem-wrap
+        textarea.form__input.form__input--message(placeholder="Your message")
+        .form__line.form__line-textarea
+
+    button.form__btn-send
+        | send

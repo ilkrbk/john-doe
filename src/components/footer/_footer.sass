@@ -1,0 +1,81 @@
+.footer
+    background: $bgGrey
+    padding: 120px 0 200px 0
+    flex: 0 0 auto
+    @media screen and (max-width: 1800px) 
+        padding: 100px 0 150px 0
+    @media screen and (max-width: 1560px) 
+        padding: 80px 0 100px 0
+    @include largeDevice
+        padding: 60px 0 80px 0
+    @include mediumDevice
+        padding: 40px
+    @include extraSmallDevice
+        padding: 20px
+
+.container--footer
+    align-items: center
+    flex-direction: column
+    width: 1040px
+    @media screen and (max-width: 1800px) 
+        width: 850px
+    @media screen and (max-width: 1560px) 
+        width: 700px
+    @include largeDevice
+        width: 500px
+    @include mediumDevice
+        width: 100%
+
+.footer__title
+    @include font ($basicFont, 1.125rem, $fontGrey)
+    position: relative
+    &:after
+        @include bottomLine ($fontGrey, 3px, -5px)
+    @include mediumDevice
+        font-size: 1rem
+    @include extraSmallDevice
+        font-size: 0.9rem
+
+.footer__btn-to-top
+    background: none
+    border: none
+    margin-top: 170px
+    @include font ($basicFont, 2.196rem, $fontGrey)
+    position: relative
+    transition: all .2s ease-out
+    cursor: pointer
+    &:after
+        @include bottomLine ($fontGrey, 6px, -8px)
+    &:hover
+        color: $basicGreen
+        &:after
+            background: $basicGreen
+    @media screen and (max-width: 1800px) 
+        margin-top: 140px
+    @media screen and (max-width: 1560px) 
+        margin-top: 130px
+        font-size: 2rem
+    @include largeDevice
+        margin-top: 80px
+        font-size: 1.8rem
+    @include mediumDevice
+        margin-top: 50px
+        font-size: 1.3rem
+        &:after
+            height: 3px
+    @include smallDevice
+        margin-top: 30px
+    @include extraSmallDevice
+        font-size: 1rem
+        margin-top: 10px
+        border: 1px solid $basicGreen
+        color: $basicGreen
+        width: 100%
+        text-align: center
+        &:after
+            display: none
+        
+
+
+
+

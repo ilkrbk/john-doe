@@ -1,0 +1,190 @@
+.container--cards
+    @include largeDevice 
+        width: 80%
+    @media screen and (max-width: 1080px) 
+        width: 90%
+    @include smallDevice 
+        width: 100%
+
+.cards__list
+    padding: 105px 0 
+    @include largeDevice 
+        padding: 80px 0 
+    @include mediumDevice 
+        padding: 60px 0 
+    @include smallDevice 
+        padding: 40px
+    @include extraSmallDevice
+        padding: 20px
+
+.cards__item
+    width: 100%
+    display: flex
+    padding: 120px 90px
+    background: $bgGrey
+    margin-top: 330px
+    &:first-child
+        margin-top: 110px
+    &:last-child
+        margin-bottom: 160px
+    &:nth-child(2n) .cards__descr-wrap
+        order: -1
+    @media screen and (max-width: 1800px) 
+        padding: 100px 80px
+    @media screen and (max-width: 1560px) 
+        padding: 80px 70px
+    @include largeDevice 
+        padding: 50px
+    @media screen and (max-width: 1080px) 
+        margin-top: 200px
+        padding: 30px
+    &:first-child
+        margin-top: 80px
+    &:last-child
+        margin-bottom: 100px
+    @include mediumDevice
+        padding: 50px
+        flex-direction: column
+        margin-top: 30px
+        &:first-child
+            margin-top: 0
+        &:last-child
+            margin-bottom: 0
+        &:nth-child(2n) .cards__descr-wrap
+            order: 1
+    @include smallDevice 
+        padding: 20px
+        margin-top: 20px
+    @include extraSmallDevice
+        padding: 15px
+
+.cards__img-wrap, .cards__descr-wrap
+    width: 50%
+    @include mediumDevice
+        width: 100%
+        text-align: center
+
+.cards__img-wrap
+    position: relative
+    @include mediumDevice
+        display: flex
+        justify-content: center
+        margin-bottom: 50px
+    @include smallDevice  
+        margin-bottom: 15px
+
+.cards__pos-block
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    width: 365px
+    @include largeDevice
+        width: 320px
+    @media screen and (max-width: 1080px) 
+        width: 250px
+    @include mediumDevice
+        width: 200px
+        text-align: center
+        position: static
+        transform: translate(0, 0)
+    @include smallDevice
+        width: 140px
+
+.cards__img
+    box-shadow: 0 0 20px rgba(0,0,0, .5)
+    @include largeDevice 
+        width: 320px
+    @media screen and (max-width: 1080px) 
+        width: 250px
+    @include mediumDevice
+        width: 200px
+    @include smallDevice
+        width: 140px
+
+.cards__title
+    margin-top: 0
+    @include font ($basicFont, 3.75rem, $fontBlue)
+    line-height: 1.204
+    @media screen and (max-width: 1800px) 
+        font-size: 3.4rem
+    @media screen and (max-width: 1560px) 
+        font-size: 3rem
+    @include largeDevice 
+        font-size: 2.5rem
+    @include mediumDevice
+        font-size: 1.8rem
+    @include smallDevice
+        font-size: 1.2rem
+
+.cards__descr
+    margin-top: 68px
+    @include font ('Roboto', 1.125rem, $fontGrey)
+    line-height: 2.667
+    font-weight: 400
+    @media screen and (max-width: 1800px) 
+        margin-top: 55px
+    @media screen and (max-width: 1560px) 
+        margin-top: 40px
+    @include largeDevice 
+        margin-top: 30px
+        line-height: 1.5
+    @include mediumDevice
+        margin-top: 20px
+    @include smallDevice
+        margin-top: 10px
+        font-size: 1rem
+
+li.slick-active button:before
+    color: $basicGreen !important
+
+.cards__footer
+    width: 100%
+    background: $basicGreen
+    padding: 160px 0
+    text-align: center
+    @media screen and (max-width: 1800px) 
+        padding: 130px 0
+    @media screen and (max-width: 1560px) 
+        padding: 100px 0
+    @include largeDevice 
+        padding: 80px 0 
+    @include mediumDevice 
+        padding: 60px 0 70px 0
+    @include smallDevice 
+        padding: 40px 0 50px 0
+    @include extraSmallDevice
+        padding: 20px 0 30px 0
+    
+.cards__footer-title
+    border: none
+    background: none
+    margin-top: 0
+    display: inline-block
+    @include font ($basicFont, 3.75rem, $white)
+    position: relative
+    &:after
+        @include bottomLine($white, 10px, -10px)
+    @media screen and (max-width: 1800px) 
+        font-size: 3.5rem
+    @media screen and (max-width: 1560px) 
+        font-size: 3rem
+    @include largeDevice 
+        font-size: 2.5rem
+        &:after
+            height: 4px
+            bottom: -5px
+    @include mediumDevice 
+        font-size: 1.8rem
+    @include smallDevice 
+        font-size: 1.4rem
+    @include extraSmallDevice
+        font-size: 1.1rem
+        &:after
+            height: 2px
+            bottom: -3px
+
+.cards__footer--hide
+    display: none
+    

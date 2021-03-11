@@ -1,0 +1,27 @@
+- 
+    var link = [
+        {
+            content: 'nav__link--1',
+            value: 'Selected works'
+        },
+        {
+            content: 'nav__link--2',
+            value: 'About'
+        },
+        {
+            content: 'nav__link--3',
+            value: 'Contact'
+        }
+    ]
+
+header.header
+    .container.container--header
+        input.header__checkbox#checkbox(type="checkbox")
+        label.header__btn(for="checkbox")
+            i.material-icons.header__btn-icon menu
+        nav.nav#nav
+            ul.nav__list
+                - for (var k = 0; k < link.length; k++)
+                each navLink in link
+                    li.nav__item
+                        a.nav__link(href="#" class= navLink.content)= navLink.value

@@ -1,0 +1,43 @@
+-
+    var cards = [
+        {
+            1:"img/app-screen-card1.jpg",
+            2:"img/app-screen-card2.jpg",
+            3:"img/app-screen-card3.jpg",
+            title: 'Just 6ix Weeks',
+            descr: 'Just 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD template'
+        },
+        {
+            1:"img/app-screen-card2.jpg",
+            2:"img/app-screen-card1.jpg",
+            3:"img/app-screen-card3.jpg",
+            title: 'Ventas UI Kit',
+            descr: 'Ventas is designed for travel magazines and readers to share thVentas Just 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD templateis designed for travel magazines and readers to share th'
+        },
+        {
+            1:"img/app-screen-card3.jpg",
+            2:"img/app-screen-card1.jpg",
+            3:"img/app-screen-card2.jpg",
+            title: 'Faumail',
+            descr: 'Faumail is a clean looking mobile UI kit for mail app design inFaumail is a clean looking mobile Just 6ix Weeks is a fitness app PSD templateJust 6ix Weeks is a fitness app PSD templateUI kit for mail app design in'
+        },
+    ]
+
+.cards
+    .container.container--content.container--cards
+        ul.cards__list#cards__list
+            - for (var e = 0; e < cards.length; e++)
+            each cardsContent in cards
+                li.cards__item
+                    .cards__img-wrap
+                        .cards__pos-block
+                            - for (var i = 0; i < 3; i++)
+                                .item
+                                    img.cards__img(alt='cards__slider-pic' src= `${cardsContent[i+1]}`)
+                    .cards__descr-wrap
+                        h3.cards__title
+                            != cardsContent.title
+                        p.cards__descr
+                            != cardsContent.descr
+    footer.cards__footer
+        button.cards__footer-title#cards-btn View more projects

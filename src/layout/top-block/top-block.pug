@@ -1,0 +1,79 @@
+-
+    var src = [
+        {
+            img: 'img/Circle1.svg',
+            class: 'top-block__circle1'
+        },
+        {
+            img: 'img/Circle2.svg',
+            class: 'top-block__circle2'
+        },
+        {
+            img: 'img/Circle3.svg',
+            class: 'top-block__circle3-1'
+        },
+        {
+            img: 'img/Circle4.svg',
+            class: 'top-block__circle4'
+        },
+        {
+            img: 'img/Circle3.svg',
+            class: 'top-block__circle3-2'
+        },
+        {
+            img: 'img/Circle5.svg',
+            class: 'top-block__circle5'
+        },
+        {
+            img: 'img/Circle6.svg',
+            class: 'top-block__circle6'
+        }
+    ]
+
+-
+    var partBlock = [
+        {
+            class: 'top-block__part1',
+            valueName: 'John',
+            valueTitle: 'Personal'
+        },
+        {
+            class: 'top-block__part2',
+            valueName: '<span class="green">Doe</span>',
+            valueTitle: '<span class="green">Portfolio</span>'
+        }
+    ] 
+
+-
+    var social = ['fa fa-behance', 'fa fa-facebook']
+
+-
+    var lang = ['eng', 'pol']
+
+.top-block
+    - for (var d = 0; d < src.length; d++)
+    each source in src
+        img.top-block__circle(src= source.img alt="circle" class= source.class)    
+    .top-block__info-wrap
+        img.top-block__circle.top-block__X(src="img/x.png" alt="X")
+        - for (var g = 0; g < partBlock.length; g++)
+        each value in partBlock
+            div(class= value.class)
+                h1.top-block__name
+                    != value.valueName
+                h2.top-block__title
+                    != value.valueTitle
+    footer.top-block__footer
+        ul.top-block__social
+            - for (var r = 0; r < social.length; r++)
+            each icon in social
+                li.top-block__social-item
+                    a.top-block__lang-link(href='#')
+                        i(class= icon aria-hidden="true")
+        ul.top-block__lang
+            - for (var t = 0; t < lang.length; t++)
+            each item in lang
+                li.top-block__lang-item
+                    a.top-block__lang-link(href='#')
+                        != item
+

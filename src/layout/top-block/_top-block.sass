@@ -1,0 +1,227 @@
+.top-block
+    display: flex
+    width: 100%
+    height: 100vh
+    background: $bgGrey
+    position: relative
+    justify-content: space-around
+    align-items: center
+    flex-direction: column
+    &:before
+        content: ''
+        width: 50%
+        height: 100%
+        background: url(../img/bg-part1.jpg) 50% 50% no-repeat
+        background-size: cover
+        position: absolute
+        top: 0
+        left: 0
+    @media screen and (max-width: 1080px) 
+            &:before
+                width: 100%
+
+.top-block__circle
+    position: absolute
+
+.top-block__circle1
+    right: -6px
+    top: 0px
+    width: 402px
+    height: 500px
+    @media screen and (max-width: 1800px) 
+        right: -26px
+        width: 402px
+        height: 450px
+    @media screen and (max-width: 1550px) 
+        width: 342px
+        height: 390px
+    @media screen and (max-width: 1300px) 
+        width: 262px
+        height: 340px
+    @media screen and (max-width: 1080px) 
+        display: none
+
+.top-block__circle2
+    right: 0
+    bottom: -207px
+    width: 180px
+    height: 350px
+    @media screen and (max-width: 1800px)
+        width: 103px
+        height: 300px
+        bottom: -150px
+    @media screen and (max-width: 1295px) 
+        bottom: -152px
+        width: 107px
+        height: 304px
+    @media screen and (max-width: 1080px) 
+        bottom: -132px
+        width: 67px
+        height: 264px
+    @include smallDevice
+        display: none
+
+.top-block__circle3-1
+    right: 15%//////////////////////////////////////////////////
+    bottom: -16.5px
+    width: 33px 
+    height: 33px
+    transform: translateX(50%)
+    @media screen and (max-width: 1080px) 
+        right: 75%
+    @include smallDevice
+        right: 80%
+
+.top-block__circle3-2
+    right: 35%////////////////////////////////////////////////
+    bottom: -16.5px
+    width: 33px 
+    height: 33px
+    transform: translateX(50%)
+    @media screen and (max-width: 1080px) 
+        right: 25%
+    @include smallDevice
+        right: 20%
+
+.top-block__circle4
+    right: 25%
+    bottom: -97px 
+    width:  194px 
+    height: 194px 
+    transform: translateX(50%)
+    @media screen and (max-width: 1560px) 
+        bottom: -77px
+        width: 154px
+        height: 154px
+    @media screen and (max-width: 1295px) 
+        bottom: -62px
+        width: 124px
+        height: 124px
+    @media screen and (max-width: 1080px) 
+        transform: translateX(50%)
+        right: 50%
+        bottom: -52px
+        width: 104px
+        height: 104px
+
+.top-block__circle5
+    top: 50%
+    left: -10px
+    width: 180px 
+    height: 350px 
+    transform: translateY(-50%)
+    @media screen and (max-width: 1800px)
+        width: 103px
+        height: 300px
+    @media screen and (max-width: 1295px) 
+        width: 43px
+        height: 250px
+    @media screen and (max-width: 1080px) 
+        height: 190px
+    @include smallDevice
+        display: none
+
+.top-block__circle6
+    top: -30px
+    left: 50%
+    width: 350px
+    height: 180px
+    transform: translateX(-50%)
+    @media screen and (max-width: 1800px)
+        top: 0
+        width: 300px
+        height: 103px
+    @media screen and (max-width: 1295px) 
+        width: 250px
+        height: 43px
+    @media screen and (max-width: 1080px) 
+        width: 190px
+
+.top-block__X
+    top: -30px
+    left: 50%
+    transform: translate(-50%)
+    width: 57px
+    height: 60px 
+    @media screen and (max-width: 1080px) 
+        display: none
+//////////////////////////////////////////////////////////////////////////   //
+
+.top-block__info-wrap
+    margin-top: 100px
+    width: 100%
+    display: flex
+    position: relative
+
+.top-block__part1, .top-block__part2
+    width: 50%
+
+.top-block__part1
+    text-align: right
+
+.top-block__part2
+    text-align: left
+
+.top-block__name
+    padding: 0 10px
+    @include font ($basicFont, 14.063rem, $white)
+    line-height: 0.321
+    @media screen and (max-width: 1800px) 
+        font-size: 12rem
+    @media screen and (max-width: 1590px) 
+        font-size: 9rem
+    @include largeDevice 
+        font-size: 7rem 
+    @include mediumDevice
+        font-size: 5rem
+    @include smallDevice
+        font-size: 3rem
+
+.top-block__title
+    padding: 0 22px
+    @include font ($basicFont, 4.5rem, $white)    
+    line-height: 1
+    @media screen and (max-width: 1800px) 
+        font-size: 4rem
+        padding: 0 20px
+    @media screen and (max-width: 1590px) 
+        font-size: 3.2rem
+        padding: 0 18px
+    @include largeDevice 
+        font-size: 2.5rem 
+        padding: 0 15px
+    @include mediumDevice
+        padding: 0 13px
+        font-size: 1.8
+    @include smallDevice
+        font-size: 1.3rem
+        padding: 0 12px
+
+.green
+    color: $basicGreen
+
+.top-block__footer
+    margin: 0 auto
+    width: 80%
+    position: relative
+    display: flex
+    justify-content: space-between
+
+.top-block__social, .top-block__lang
+    display: flex
+
+.top-block__social-item, .top-block__lang-item
+    margin-right: 30px
+    &:last-child
+        margin-right: 0
+
+.top-block__social-link
+    font-size: 1.5rem
+    color: $white
+
+.top-block__lang-link
+    text-transform: uppercase
+    @include font ('Roboto', 1.5rem, #cecece)
+
+.top-block__lang-link--active
+    color: $fontBlue

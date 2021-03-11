@@ -1,0 +1,85 @@
+.contact
+    padding: 155px 0
+    @media screen and (max-width: 1800px) 
+        padding: 130px 0
+    @media screen and (max-width: 1560px) 
+        padding: 110px 0
+    @include largeDevice 
+        padding: 90px 0
+    @include mediumDevice 
+        padding: 60px 0 
+    @include smallDevice 
+        padding: 40px 
+    @include extraSmallDevice
+        padding: 20px
+        
+.contact__title-wrap
+    @include mediumDevice 
+        text-align: center
+
+.contact__title
+    display: inline-block
+    margin-top: 30px
+    @include font ($basicFont, 1.125rem, $fontGrey)
+    position: relative
+    &:after
+        @include bottomLine ($fontGrey, 3px, -10px)
+    @include largeDevice 
+        margin-top: 20px
+    @include mediumDevice 
+        margin-top: 0
+        font-size: 1rem
+        &:after
+            bottom: -6px
+    @include extraSmallDevice
+        font-size: 0.9rem
+
+.contact__info-wrap
+    width: 70%
+    @include mediumDevice 
+        margin-top: 20px
+        width: 100%
+
+.contact__info
+    margin-top: 0
+    @include font ($basicFont, 3.75rem, $fontBlue)
+    @media screen and (max-width: 1560px) 
+        font-size: 3rem
+    @include largeDevice 
+        font-size: 2.2rem
+    @include mediumDevice 
+        font-size: 1.5rem
+    @include smallDevice 
+        font-size: 1.2rem
+    @include extraSmallDevice
+        font-size: 1.1rem
+
+.contact__link
+    display: inline-block
+    @include font ($basicFont, 3.75rem, $white)
+    background: $basicGreen
+    border: 1px solid $basicGreen
+    padding: 20px
+    transition: all .2s ease-out
+    &:hover
+        color: $basicGreen
+        background: none
+    @media screen and (max-width: 1800px) 
+        font-size: 3.3rem
+    @media screen and (max-width: 1560px) 
+        font-size: 3rem
+        padding: 20px
+    @include largeDevice 
+        font-size: 2.2rem
+        padding: 13px
+    @include mediumDevice 
+        font-size: 1.5rem
+        margin-top: 10px
+    @include smallDevice 
+        padding: 10px
+        font-size: 1.2rem
+    @include extraSmallDevice
+        margin-top: 10px
+        width: 100%
+        font-size: 1.1rem
+        text-align: center
